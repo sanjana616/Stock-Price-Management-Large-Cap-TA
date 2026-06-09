@@ -1,51 +1,51 @@
 # 📊 Large Cap Technical Indicators
 
-**Last updated:** 2026-06-06 16:04:49 IST
+**Last Updated:** 2026-06-09 19:13 IST
 
 ---
 
 ## 📈 Indexes
 
-| Index | Date & Time | Open | High | Low | Close | Volume |
-|-------|-------------|-----:|-----:|----:|------:|-------:|
-| Nifty 50 | 2026-06-05 15:30 | 23478.95 | 23516.35 | 23282.65 | 23366.70 | 366,200 |
-| BankNifty | 2026-06-05 15:30 | 54405.20 | 54865.50 | 54140.60 | 54496.25 | 369,000 |
-| Sensex | 2026-06-05 15:30 | 74629.94 | 74717.57 | 73988.75 | 74243.34 | 18,000 |
-| MidcapNifty | 2026-06-05 15:30 | 17323.50 | 17382.05 | 17129.00 | 17198.90 | 485,800 |
-| FinNifty | 2026-06-05 15:30 | 25085.60 | 25355.10 | 24950.65 | 25056.80 | 1,448,200 |
+| Index | Market Time | Updated At | Open | High | Low | Close | Volume |
+|-------|-------------|-----------|-----:|-----:|----:|------:|-------:|
+| Nifty 50 | 2026-06-09 05:30 | 2026-06-09 19:13 | 23259.05 | 23279.40 | 23104.45 | 23242.10 | 0 |
+| BankNifty | 2026-06-09 05:30 | 2026-06-09 19:13 | 54265.00 | 55318.35 | 54242.30 | 55194.50 | 0 |
+| Sensex | 2026-06-09 05:30 | 2026-06-09 19:13 | 74035.41 | 74035.41 | 73426.18 | 73918.76 | 0 |
+| MidcapNifty | 2026-06-09 05:30 | 2026-06-09 19:13 | 17139.50 | 17274.80 | 17123.25 | 17248.10 | 0 |
+| FinNifty | 2026-06-09 05:30 | 2026-06-09 19:13 | 24934.50 | 25199.60 | 24897.35 | 25152.45 | 0 |
 
 ---
 
 ## 📋 Summary
 
-| Stock | Date | Close | EMA 20 | RSI 14 | MACD | ADX | Signal |
-|-------|------|------:|-------:|-------:|-----:|----:|:------:|
-| RELIANCE_NS | 2026-06-05 | 1291.00 | 1334.34 | 33.29 | -19.4696 | 23.08 | 🔴 SELL |
-| HDFCBANK_NS | 2026-06-05 | 747.05 | 760.99 | 41.06 | -9.0109 | 18.70 | 🟡 HOLD |
-| ICICIBANK_NS | 2026-06-05 | 1262.10 | 1258.71 | 49.71 | -7.9764 | 12.40 | 🟡 HOLD |
-| INFY_NS | 2026-06-05 | 1197.50 | 1190.14 | 50.73 | 1.0010 | 21.31 | 🟢 BUY |
-| TCS_NS | 2026-06-05 | 2198.90 | 2298.46 | 39.13 | -34.5529 | 17.72 | 🟡 HOLD |
-| ITC_NS | 2026-06-05 | 280.70 | 289.77 | 35.81 | -4.8406 | 25.78 | 🔴 SELL |
-| HINDUNILVR_NS | 2026-06-05 | 2121.50 | 2173.03 | 39.62 | -39.6832 | 20.20 | 🔴 SELL |
-| SBIN_NS | 2026-06-05 | 977.70 | 976.40 | 47.22 | -13.8004 | 24.08 | 🟡 HOLD |
-| BHARTIARTL_NS | 2026-06-05 | 1798.20 | 1839.22 | 40.47 | -9.7267 | 20.31 | 🔴 SELL |
-| KOTAKBANK_NS | 2026-06-05 | 377.45 | 382.04 | 45.21 | 0.1496 | 13.74 | 🟡 HOLD |
-| LT_NS | 2026-06-05 | 3953.20 | 3967.15 | 49.48 | 16.9702 | 9.97 | 🟡 HOLD |
-| AXISBANK_NS | 2026-06-05 | 1272.30 | 1274.14 | 48.75 | -4.8984 | 15.61 | 🟡 HOLD |
-| BAJFINANCE_NS | 2026-06-05 | 889.40 | 907.62 | 42.66 | -9.8698 | 15.28 | 🟡 HOLD |
-| ASIANPAINT_NS | 2026-06-05 | 2686.70 | 2621.30 | 66.09 | 50.1583 | 32.86 | 🟡 HOLD |
-| MARUTI_NS | 2026-06-05 | 13050.00 | 13141.05 | 45.68 | -62.3639 | 16.19 | 🟡 HOLD |
-| SUNPHARMA_NS | 2026-06-05 | 1782.20 | 1814.90 | 42.26 | -1.7228 | 19.77 | 🟡 HOLD |
-| WIPRO_NS | 2026-06-05 | 198.37 | 201.39 | 46.22 | 1.3712 | 23.00 | 🟡 HOLD |
-| POWERGRID_NS | 2026-06-05 | 285.65 | 294.96 | 35.30 | -6.1214 | 30.54 | 🔴 SELL |
-| NTPC_NS | 2026-06-05 | 361.65 | 382.83 | 28.20 | -6.4145 | 22.53 | 🔴 SELL |
-| ONGC_NS | 2026-06-05 | 264.75 | 278.04 | 32.91 | -6.2157 | 26.63 | 🔴 SELL |
+| Stock | Market Date | Updated At | Close | EMA 20 | RSI 14 | MACD | ADX | Signal |
+|-------|-------------|-----------|------:|-------:|-------:|-----:|----:|:------:|
+| RELIANCE_NS | 2026-06-09 | 2026-06-09 19:13 | 1269.20 | 1322.02 | 30.61 | -24.4355 | 26.81 | 🔴 SELL |
+| HDFCBANK_NS | 2026-06-09 | 2026-06-09 19:13 | 738.35 | 756.91 | 37.88 | -10.1861 | 20.00 | 🟡 HOLD |
+| ICICIBANK_NS | 2026-06-09 | 2026-06-09 19:13 | 1275.00 | 1259.53 | 53.45 | -5.4571 | 11.76 | 🟡 HOLD |
+| INFY_NS | 2026-06-09 | 2026-06-09 19:13 | 1180.30 | 1188.98 | 47.53 | -0.6135 | 19.44 | 🟡 HOLD |
+| TCS_NS | 2026-06-09 | 2026-06-09 19:13 | 2151.00 | 2271.75 | 35.95 | -47.7430 | 17.33 | 🟡 HOLD |
+| ITC_NS | 2026-06-09 | 2026-06-09 19:13 | 280.00 | 287.95 | 35.64 | -5.0952 | 27.69 | 🔴 SELL |
+| HINDUNILVR_NS | 2026-06-09 | 2026-06-09 19:13 | 2132.80 | 2163.78 | 42.54 | -37.2156 | 20.15 | 🔴 SELL |
+| SBIN_NS | 2026-06-09 | 2026-06-09 19:13 | 1002.70 | 979.38 | 56.83 | -8.4048 | 21.76 | 🟢 BUY |
+| BHARTIARTL_NS | 2026-06-09 | 2026-06-09 19:13 | 1799.00 | 1833.16 | 41.53 | -12.1417 | 21.53 | 🔴 SELL |
+| KOTAKBANK_NS | 2026-06-09 | 2026-06-09 19:13 | 381.70 | 381.58 | 50.21 | -0.1978 | 13.91 | 🟡 HOLD |
+| LT_NS | 2026-06-09 | 2026-06-09 19:13 | 3900.60 | 3952.92 | 44.95 | 2.3365 | 10.44 | 🟡 HOLD |
+| AXISBANK_NS | 2026-06-09 | 2026-06-09 19:13 | 1292.40 | 1275.36 | 54.58 | -2.7017 | 14.34 | 🟡 HOLD |
+| BAJFINANCE_NS | 2026-06-09 | 2026-06-09 19:13 | 886.90 | 902.50 | 43.74 | -11.3405 | 14.03 | 🟡 HOLD |
+| ASIANPAINT_NS | 2026-06-09 | 2026-06-09 19:13 | 2708.10 | 2632.83 | 66.00 | 48.2773 | 33.03 | 🟡 HOLD |
+| MARUTI_NS | 2026-06-09 | 2026-06-09 19:13 | 13120.00 | 13119.31 | 49.00 | -64.0734 | 16.48 | 🟡 HOLD |
+| SUNPHARMA_NS | 2026-06-09 | 2026-06-09 19:13 | 1779.00 | 1809.23 | 41.95 | -5.3208 | 18.82 | 🟡 HOLD |
+| WIPRO_NS | 2026-06-09 | 2026-06-09 19:13 | 181.67 | 197.82 | 31.16 | -1.7472 | 23.37 | 🔴 SELL |
+| POWERGRID_NS | 2026-06-09 | 2026-06-09 19:13 | 285.70 | 293.68 | 37.87 | -5.6925 | 29.63 | 🔴 SELL |
+| NTPC_NS | 2026-06-09 | 2026-06-09 19:13 | 355.65 | 378.48 | 25.71 | -8.2552 | 26.37 | 🔴 SELL |
+| ONGC_NS | 2026-06-09 | 2026-06-09 19:13 | 259.00 | 275.08 | 28.89 | -7.0363 | 27.86 | 🔴 SELL |
 
 ---
 
 ## RELIANCE_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `1291.00` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `1269.20` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
 
 ### 📈 Trend Indicators
 
@@ -102,7 +102,7 @@
 
 ## HDFCBANK_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `747.05` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `738.35` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -145,9 +145,9 @@
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | -1049165140 | CMF | -0.1974 | Acc/Dist | -404095150 |
-| MFI | 39.12 | Force Index | -132968338 | EOM | 33.353216 |
-| VPT | -19388351 | NVI | 1037.51 | VWAP | 756.87 |
+| OBV | -1161635344 | CMF | -0.1229 | Acc/Dist | -409065352 |
+| MFI | 39.57 | Force Index | -121509219 | EOM | 3.778836 |
+| VPT | -20097341 | NVI | 1025.74 | VWAP | 754.12 |
 
 ### 🕯️ Price Action
 
@@ -159,7 +159,7 @@
 
 ## ICICIBANK_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `1262.10` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `1275.00` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -216,7 +216,7 @@
 
 ## INFY_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `1197.50` &nbsp;|&nbsp; **Signal:** 🟢 **BUY**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `1180.30` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -273,7 +273,7 @@
 
 ## TCS_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `2198.90` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `2151.00` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -330,7 +330,7 @@
 
 ## ITC_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `280.70` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `280.00` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
 
 ### 📈 Trend Indicators
 
@@ -373,9 +373,9 @@
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | -553393763 | CMF | -0.2423 | Acc/Dist | -787953502 |
-| MFI | 30.97 | Force Index | -35799671 | EOM | 39.221528 |
-| VPT | -33193623 | NVI | 840.46 | VWAP | 289.69 |
+| OBV | -578860352 | CMF | -0.1918 | Acc/Dist | -799164720 |
+| MFI | 25.23 | Force Index | -27750602 | EOM | -28.667757 |
+| VPT | -33330262 | NVI | 834.48 | VWAP | 287.61 |
 
 ### 🕯️ Price Action
 
@@ -387,7 +387,7 @@
 
 ## HINDUNILVR_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `2121.50` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `2132.80` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
 
 ### 📈 Trend Indicators
 
@@ -444,7 +444,7 @@
 
 ## SBIN_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `977.70` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `1002.70` &nbsp;|&nbsp; **Signal:** 🟢 **BUY**
 
 ### 📈 Trend Indicators
 
@@ -501,7 +501,7 @@
 
 ## BHARTIARTL_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `1798.20` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `1799.00` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
 
 ### 📈 Trend Indicators
 
@@ -558,7 +558,7 @@
 
 ## KOTAKBANK_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `377.45` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `381.70` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -615,7 +615,7 @@
 
 ## LT_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `3953.20` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `3900.60` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -672,7 +672,7 @@
 
 ## AXISBANK_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `1272.30` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `1292.40` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -729,7 +729,7 @@
 
 ## BAJFINANCE_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `889.40` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `886.90` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -786,7 +786,7 @@
 
 ## ASIANPAINT_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `2686.70` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `2708.10` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -843,7 +843,7 @@
 
 ## MARUTI_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `13050.00` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `13120.00` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -900,7 +900,7 @@
 
 ## SUNPHARMA_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `1782.20` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `1779.00` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
 
 ### 📈 Trend Indicators
 
@@ -957,7 +957,7 @@
 
 ## WIPRO_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `198.37` &nbsp;|&nbsp; **Signal:** 🟡 **HOLD**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `181.67` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
 
 ### 📈 Trend Indicators
 
@@ -1014,7 +1014,7 @@
 
 ## POWERGRID_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `285.65` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `285.70` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
 
 ### 📈 Trend Indicators
 
@@ -1057,9 +1057,9 @@
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | -26241470 | CMF | -0.1178 | Acc/Dist | 45661380 |
-| MFI | 27.83 | Force Index | -58622243 | EOM | 89.322995 |
-| VPT | 1550644 | NVI | 1065.33 | VWAP | 291.57 |
+| OBV | -46510646 | CMF | -0.0860 | Acc/Dist | 33695754 |
+| MFI | 23.34 | Force Index | -43326741 | EOM | 161.371157 |
+| VPT | 1387248 | NVI | 1042.96 | VWAP | 290.74 |
 
 ### 🕯️ Price Action
 
@@ -1071,7 +1071,7 @@
 
 ## NTPC_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `361.65` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `355.65` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
 
 ### 📈 Trend Indicators
 
@@ -1114,9 +1114,9 @@
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 39065694 | CMF | -0.2836 | Acc/Dist | 68688182 |
-| MFI | 37.07 | Force Index | -45828476 | EOM | -287.533744 |
-| VPT | 2669767 | NVI | 931.68 | VWAP | 381.95 |
+| OBV | 12082551 | CMF | -0.2348 | Acc/Dist | 62525067 |
+| MFI | 26.64 | Force Index | -46033947 | EOM | -54.969223 |
+| VPT | 2041795 | NVI | 902.79 | VWAP | 377.66 |
 
 ### 🕯️ Price Action
 
@@ -1128,7 +1128,7 @@
 
 ## ONGC_NS
 
-**Date:** `2026-06-05 15:30` &nbsp;|&nbsp; **Close:** `264.75` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
+**Market Date:** `2026-06-09` &nbsp;|&nbsp; **Updated At:** `2026-06-09 19:13` &nbsp;|&nbsp; **Close:** `259.00` &nbsp;|&nbsp; **Signal:** 🔴 **SELL**
 
 ### 📈 Trend Indicators
 
@@ -1171,9 +1171,9 @@
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 464557636 | CMF | -0.2041 | Acc/Dist | -52680302 |
-| MFI | 22.39 | Force Index | -56835906 | EOM | -155.305510 |
-| VPT | 13291257 | NVI | 903.94 | VWAP | 275.87 |
+| OBV | 431861030 | CMF | -0.2949 | Acc/Dist | -64226865 |
+| MFI | 17.30 | Force Index | -50555426 | EOM | -171.748684 |
+| VPT | 12912406 | NVI | 894.98 | VWAP | 272.85 |
 
 ### 🕯️ Price Action
 
