@@ -79,6 +79,7 @@ CREATE TABLE IF NOT EXISTS technical_indicators (
     force_index REAL, eom REAL, vpt REAL, nvi REAL, vwap REAL,
     price_change_pct REAL,
     signal TEXT,
+    fetched_at TEXT,
     PRIMARY KEY (datetime, stock_name)
 )
 """
@@ -275,6 +276,7 @@ def build_indicator_df(symbol: str, df: pd.DataFrame) -> pd.DataFrame:
 
     out["price_change_pct"] = c.pct_change() * 100
     out["signal"]           = out.apply(_signal, axis=1)
+    out["fetched_at"]       = datetime.now(IST).strftime("%Y-%m-%d %H:%M")
 
     return out.reset_index(drop=True)
 
@@ -314,7 +316,6 @@ INDEX_DISPLAY = {
 
 def update_readme(all_symbols: list[str]):
     conn = sqlite3.connect(DB_NAME)
-    now  = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
 
     latest_rows = {}
     for sym in all_symbols:
@@ -331,9 +332,10 @@ def update_readme(all_symbols: list[str]):
     index_syms = [s for s in all_symbols if s in INDEX_DISPLAY]
     stock_syms = [s for s in all_symbols if s not in INDEX_DISPLAY]
 
+    latest_dt = max((r["fetched_at"] for r in latest_rows.values()), default="—")
     lines = [
         "# 📊 Large Cap Technical Indicators\n\n",
-        f"**Last updated:** {now}\n\n",
+        f"**Last updated:** {latest_dt} IST\n\n",
         "---\n\n",
         "## 📈 Indexes\n\n",
         "| Index | Date & Time | Open | High | Low | Close | Volume |\n",
@@ -346,7 +348,7 @@ def update_readme(all_symbols: list[str]):
         r = latest_rows[sym]
         vol = "—" if (r["volume"] is None or (isinstance(r["volume"], float) and np.isnan(r["volume"]))) else f"{int(r['volume']):,}"
         lines.append(
-            f"| {INDEX_DISPLAY[sym]} | {r['datetime'][:10]} 15:30 "
+            f"| {INDEX_DISPLAY[sym]} | {r['fetched_at']} "
             f"| {_fmt(r['open'])} | {_fmt(r['high'])} | {_fmt(r['low'])} "
             f"| {_fmt(r['close'])} | {vol} |\n"
         )
@@ -354,8 +356,8 @@ def update_readme(all_symbols: list[str]):
     lines += [
         "\n---\n\n",
         "## 📋 Summary\n\n",
-        "| Stock | Date | Close | EMA 20 | RSI 14 | MACD | ADX | Signal |\n",
-        "|-------|------|------:|-------:|-------:|-----:|----:|:------:|\n",
+        "| Stock | Date & Time | Close | EMA 20 | RSI 14 | MACD | ADX | Signal |\n",
+        "|-------|-------------|------:|-------:|-------:|-----:|----:|:------:|\n",
     ]
 
     for sym in stock_syms:
@@ -365,7 +367,7 @@ def update_readme(all_symbols: list[str]):
         sig  = r["signal"]
         icon = {"BUY": "🟢 BUY", "SELL": "🔴 SELL", "HOLD": "🟡 HOLD"}.get(sig, sig)
         lines.append(
-            f"| {_dn(sym)} | {r['datetime'][:10]} | {_fmt(r['close'])} "
+            f"| {_dn(sym)} | {r['fetched_at']} | {_fmt(r['close'])} "
             f"| {_fmt(r['ema_20'])} | {_fmt(r['rsi_14'])} "
             f"| {_fmt(r['macd'], 4)} | {_fmt(r['adx'])} | {icon} |\n"
         )
@@ -381,7 +383,7 @@ def update_readme(all_symbols: list[str]):
 
         lines.append(f"## {_dn(sym)}\n\n")
         lines.append(
-            f"**Date:** `{r['datetime'][:10]} 15:30` &nbsp;|&nbsp; "
+            f"**Date:** `{r['fetched_at']}` &nbsp;|&nbsp; "
             f"**Close:** `{_fmt(r['close'])}` &nbsp;|&nbsp; "
             f"**Signal:** {icon} **{sig}**\n\n"
         )
