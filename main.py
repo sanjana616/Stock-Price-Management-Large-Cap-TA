@@ -113,7 +113,7 @@ def upsert_df(df_rows: pd.DataFrame):
 # ── Fetch ──────────────────────────────────────────────────────────────────────
 def fetch(symbol: str) -> pd.DataFrame | None:
     try:
-        raw = yf.download(symbol, interval="1d", period="1y", progress=False, auto_adjust=True)
+        raw = yf.download(symbol, interval="1m", period="1d", progress=False, auto_adjust=True)
         if raw.empty:
             logger.warning(f"No data: {symbol}")
             return None
@@ -126,6 +126,7 @@ def fetch(symbol: str) -> pd.DataFrame | None:
             raw.index = raw.index.tz_localize("UTC")
         raw.index = raw.index.tz_convert(IST)
         df = raw[["open", "high", "low", "close", "volume"]].copy()
+        df = df.iloc[:-1]  # drop last incomplete candle
         df.dropna(subset=["open", "high", "low", "close"], inplace=True)
         return df
     except Exception as e:
@@ -157,7 +158,7 @@ def build_indicator_df(symbol: str, df: pd.DataFrame) -> pd.DataFrame:
     has_vol = v.replace(0, np.nan).notna().sum() > 20
 
     out = pd.DataFrame(index=df.index)
-    out["datetime"]   = df.index.strftime("%Y-%m-%d") + " " + datetime.now(IST).strftime("%H:%M:%S")
+    out["datetime"]   = df.index.strftime("%Y-%m-%d %H:%M:%S")
     out["stock_name"] = symbol
     out["open"]       = o.values
     out["high"]       = h.values
@@ -280,7 +281,7 @@ def build_indicator_df(symbol: str, df: pd.DataFrame) -> pd.DataFrame:
 
     out["price_change_pct"] = c.pct_change() * 100
     out["signal"]           = out.apply(_signal, axis=1)
-    out["updated_at"]       = datetime.now(IST).strftime("%Y-%m-%d %H:%M")
+    out["updated_at"]       = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S")
 
     return out.reset_index(drop=True)
 
@@ -336,7 +337,9 @@ def update_readme(all_symbols: list[str]):
     index_syms = [s for s in all_symbols if s in INDEX_DISPLAY]
     stock_syms = [s for s in all_symbols if s not in INDEX_DISPLAY]
 
-    latest_dt = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S")
+    latest_dt = pd.read_sql_query(
+        "SELECT MAX(updated_at) AS last_updated FROM technical_indicators", conn
+    ).iloc[0, 0] or "—"
     lines = [
         "# 📊 Large Cap Technical Indicators\n\n",
         f"Last updated: {latest_dt} IST\n\n",
