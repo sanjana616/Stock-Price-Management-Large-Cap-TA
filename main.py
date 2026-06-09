@@ -157,7 +157,7 @@ def build_indicator_df(symbol: str, df: pd.DataFrame) -> pd.DataFrame:
     has_vol = v.replace(0, np.nan).notna().sum() > 20
 
     out = pd.DataFrame(index=df.index)
-    out["datetime"]   = df.index.strftime("%Y-%m-%d %H:%M:%S")
+    out["datetime"]   = df.index.strftime("%Y-%m-%d") + " " + datetime.now(IST).strftime("%H:%M:%S")
     out["stock_name"] = symbol
     out["open"]       = o.values
     out["high"]       = h.values
@@ -336,32 +336,32 @@ def update_readme(all_symbols: list[str]):
     index_syms = [s for s in all_symbols if s in INDEX_DISPLAY]
     stock_syms = [s for s in all_symbols if s not in INDEX_DISPLAY]
 
-    latest_dt = max((r["updated_at"] for r in latest_rows.values()), default="—")
+    latest_dt = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S")
     lines = [
         "# 📊 Large Cap Technical Indicators\n\n",
-        f"**Last Updated:** {latest_dt} IST\n\n",
-        "---\n\n",
-        "## 📈 Indexes\n\n",
-        "| Index | Market Time | Updated At | Open | High | Low | Close | Volume |\n",
-        "|-------|-------------|-----------|-----:|-----:|----:|------:|-------:|\n",
+        f"Last updated: {latest_dt} IST\n\n",
+        "## 📊 MARKET INDEXES\n\n",
+        "| Symbol | Datetime | Close | Volume | RSI | EMA20 | MACD | VWAP | Signal |\n",
+        "|--------|----------|------:|-------:|----:|------:|-----:|-----:|:------:|\n",
     ]
 
     for sym in index_syms:
         if sym not in latest_rows:
             continue
-        r = latest_rows[sym]
+        r   = latest_rows[sym]
+        sig = r["signal"]
+        icon = {"BUY": "🟢 BUY", "SELL": "🔴 SELL", "HOLD": "🟡 HOLD"}.get(sig, sig)
         vol = "—" if (r["volume"] is None or (isinstance(r["volume"], float) and np.isnan(r["volume"]))) else f"{int(r['volume']):,}"
         lines.append(
-            f"| {INDEX_DISPLAY[sym]} | {r['datetime'][:16]} | {r['updated_at']} "
-            f"| {_fmt(r['open'])} | {_fmt(r['high'])} | {_fmt(r['low'])} "
-            f"| {_fmt(r['close'])} | {vol} |\n"
+            f"| {INDEX_DISPLAY[sym]} | {r['datetime']} "
+            f"| {_fmt(r['close'])} | {vol} | {_fmt(r['rsi_14'])} "
+            f"| {_fmt(r['ema_20'])} | {_fmt(r['macd'], 4)} | {_fmt(r['vwap'])} | {icon} |\n"
         )
 
     lines += [
-        "\n---\n\n",
-        "## 📋 Summary\n\n",
-        "| Stock | Market Date | Updated At | Close | EMA 20 | RSI 14 | MACD | ADX | Signal |\n",
-        "|-------|-------------|-----------|------:|-------:|-------:|-----:|----:|:------:|\n",
+        "\n## 📈 STOCKS\n\n",
+        "| Symbol | Datetime | Close | Volume | RSI | EMA20 | MACD | VWAP | Signal |\n",
+        "|--------|----------|------:|-------:|----:|------:|-----:|-----:|:------:|\n",
     ]
 
     for sym in stock_syms:
@@ -370,10 +370,11 @@ def update_readme(all_symbols: list[str]):
         r    = latest_rows[sym]
         sig  = r["signal"]
         icon = {"BUY": "🟢 BUY", "SELL": "🔴 SELL", "HOLD": "🟡 HOLD"}.get(sig, sig)
+        vol  = "—" if (r["volume"] is None or (isinstance(r["volume"], float) and np.isnan(r["volume"]))) else f"{int(r['volume']):,}"
         lines.append(
-            f"| {_dn(sym)} | {r['datetime'][:10]} | {r['updated_at']} | {_fmt(r['close'])} "
-            f"| {_fmt(r['ema_20'])} | {_fmt(r['rsi_14'])} "
-            f"| {_fmt(r['macd'], 4)} | {_fmt(r['adx'])} | {icon} |\n"
+            f"| {_dn(sym)} | {r['datetime']} "
+            f"| {_fmt(r['close'])} | {vol} | {_fmt(r['rsi_14'])} "
+            f"| {_fmt(r['ema_20'])} | {_fmt(r['macd'], 4)} | {_fmt(r['vwap'])} | {icon} |\n"
         )
 
     lines.append("\n---\n\n")
@@ -387,8 +388,7 @@ def update_readme(all_symbols: list[str]):
 
         lines.append(f"## {_dn(sym)}\n\n")
         lines.append(
-            f"**Market Date:** `{r['datetime'][:10]}` &nbsp;|&nbsp; "
-            f"**Updated At:** `{r['updated_at']}` &nbsp;|&nbsp; "
+            f"**Datetime:** `{r['datetime']}` &nbsp;|&nbsp; "
             f"**Close:** `{_fmt(r['close'])}` &nbsp;|&nbsp; "
             f"**Signal:** {icon} **{sig}**\n\n"
         )
