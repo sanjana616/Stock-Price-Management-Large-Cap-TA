@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS technical_indicators (
     force_index REAL, eom REAL, vpt REAL, nvi REAL, vwap REAL,
     price_change_pct REAL,
     signal TEXT,
-    fetched_at TEXT,
+    updated_at TEXT,
     PRIMARY KEY (datetime, stock_name)
 )
 """
@@ -88,6 +88,10 @@ CREATE TABLE IF NOT EXISTS technical_indicators (
 def init_db():
     with sqlite3.connect(DB_NAME) as conn:
         conn.execute(CREATE_SQL)
+        # migrate: rename fetched_at -> updated_at if old column exists
+        cols = [r[1] for r in conn.execute("PRAGMA table_info(technical_indicators)").fetchall()]
+        if "fetched_at" in cols and "updated_at" not in cols:
+            conn.execute("ALTER TABLE technical_indicators RENAME COLUMN fetched_at TO updated_at")
         conn.commit()
 
 
@@ -276,7 +280,7 @@ def build_indicator_df(symbol: str, df: pd.DataFrame) -> pd.DataFrame:
 
     out["price_change_pct"] = c.pct_change() * 100
     out["signal"]           = out.apply(_signal, axis=1)
-    out["fetched_at"]       = datetime.now(IST).strftime("%Y-%m-%d %H:%M")
+    out["updated_at"]       = datetime.now(IST).strftime("%Y-%m-%d %H:%M")
 
     return out.reset_index(drop=True)
 
@@ -332,14 +336,14 @@ def update_readme(all_symbols: list[str]):
     index_syms = [s for s in all_symbols if s in INDEX_DISPLAY]
     stock_syms = [s for s in all_symbols if s not in INDEX_DISPLAY]
 
-    latest_dt = max((r["fetched_at"] for r in latest_rows.values()), default="—")
+    latest_dt = max((r["updated_at"] for r in latest_rows.values()), default="—")
     lines = [
         "# 📊 Large Cap Technical Indicators\n\n",
-        f"**Last updated:** {latest_dt} IST\n\n",
+        f"**Last Updated:** {latest_dt} IST\n\n",
         "---\n\n",
         "## 📈 Indexes\n\n",
-        "| Index | Date & Time | Open | High | Low | Close | Volume |\n",
-        "|-------|-------------|-----:|-----:|----:|------:|-------:|\n",
+        "| Index | Market Time | Updated At | Open | High | Low | Close | Volume |\n",
+        "|-------|-------------|-----------|-----:|-----:|----:|------:|-------:|\n",
     ]
 
     for sym in index_syms:
@@ -348,7 +352,7 @@ def update_readme(all_symbols: list[str]):
         r = latest_rows[sym]
         vol = "—" if (r["volume"] is None or (isinstance(r["volume"], float) and np.isnan(r["volume"]))) else f"{int(r['volume']):,}"
         lines.append(
-            f"| {INDEX_DISPLAY[sym]} | {r['fetched_at']} "
+            f"| {INDEX_DISPLAY[sym]} | {r['datetime'][:16]} | {r['updated_at']} "
             f"| {_fmt(r['open'])} | {_fmt(r['high'])} | {_fmt(r['low'])} "
             f"| {_fmt(r['close'])} | {vol} |\n"
         )
@@ -356,8 +360,8 @@ def update_readme(all_symbols: list[str]):
     lines += [
         "\n---\n\n",
         "## 📋 Summary\n\n",
-        "| Stock | Date & Time | Close | EMA 20 | RSI 14 | MACD | ADX | Signal |\n",
-        "|-------|-------------|------:|-------:|-------:|-----:|----:|:------:|\n",
+        "| Stock | Market Date | Updated At | Close | EMA 20 | RSI 14 | MACD | ADX | Signal |\n",
+        "|-------|-------------|-----------|------:|-------:|-------:|-----:|----:|:------:|\n",
     ]
 
     for sym in stock_syms:
@@ -367,7 +371,7 @@ def update_readme(all_symbols: list[str]):
         sig  = r["signal"]
         icon = {"BUY": "🟢 BUY", "SELL": "🔴 SELL", "HOLD": "🟡 HOLD"}.get(sig, sig)
         lines.append(
-            f"| {_dn(sym)} | {r['fetched_at']} | {_fmt(r['close'])} "
+            f"| {_dn(sym)} | {r['datetime'][:10]} | {r['updated_at']} | {_fmt(r['close'])} "
             f"| {_fmt(r['ema_20'])} | {_fmt(r['rsi_14'])} "
             f"| {_fmt(r['macd'], 4)} | {_fmt(r['adx'])} | {icon} |\n"
         )
@@ -383,7 +387,8 @@ def update_readme(all_symbols: list[str]):
 
         lines.append(f"## {_dn(sym)}\n\n")
         lines.append(
-            f"**Date:** `{r['fetched_at']}` &nbsp;|&nbsp; "
+            f"**Market Date:** `{r['datetime'][:10]}` &nbsp;|&nbsp; "
+            f"**Updated At:** `{r['updated_at']}` &nbsp;|&nbsp; "
             f"**Close:** `{_fmt(r['close'])}` &nbsp;|&nbsp; "
             f"**Signal:** {icon} **{sig}**\n\n"
         )
