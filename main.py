@@ -281,7 +281,7 @@ def build_indicator_df(symbol: str, df: pd.DataFrame) -> pd.DataFrame:
 
     out["price_change_pct"] = c.pct_change() * 100
     out["signal"]           = out.apply(_signal, axis=1)
-    out["updated_at"]       = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S")
+    out["updated_at"]       = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
 
     return out.reset_index(drop=True)
 
@@ -337,9 +337,7 @@ def update_readme(all_symbols: list[str]):
     index_syms = [s for s in all_symbols if s in INDEX_DISPLAY]
     stock_syms = [s for s in all_symbols if s not in INDEX_DISPLAY]
 
-    latest_dt = pd.read_sql_query(
-        "SELECT MAX(updated_at) AS last_updated FROM technical_indicators", conn
-    ).iloc[0, 0] or "—"
+    latest_dt = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S")
     lines = [
         "# 📊 Large Cap Technical Indicators\n\n",
         f"Last updated: {latest_dt} IST\n\n",
