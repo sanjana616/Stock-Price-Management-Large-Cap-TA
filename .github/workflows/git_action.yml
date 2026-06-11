@@ -33,7 +33,11 @@ jobs:
 
       - name: Run script
         run: |
-          rm -f LargeCap_Technical.db
+          # Reset DB on Monday (weekday 1) to start a fresh week
+          if [ "$(date -u +%u)" = "1" ]; then
+            rm -f LargeCap_Technical.db
+            echo "Monday: DB reset for new week"
+          fi
           python main.py
 
       - name: Commit and push changes
