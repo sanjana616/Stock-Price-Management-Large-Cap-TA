@@ -1,6 +1,6 @@
 # 📊 Large Cap Technical Indicators
 
-Last updated: 2026-06-26 15:55:06 IST
+Last updated: 2026-06-26 18:01:49 IST
 
 ## 📊 MARKET INDEXES
 
@@ -198,9 +198,9 @@ Last updated: 2026-06-26 15:55:06 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 4409991 | CMF | 0.1712 | Acc/Dist | 538241 |
+| OBV | 4360437 | CMF | 0.1712 | Acc/Dist | 567913 |
 | MFI | 58.06 | Force Index | -79347 | EOM | -3746.149760 |
-| VPT | 260 | NVI | 1030.05 | VWAP | 1388.86 |
+| VPT | 261 | NVI | 1029.75 | VWAP | 1388.86 |
 
 ### 🕯️ Price Action
 
@@ -278,7 +278,7 @@ Last updated: 2026-06-26 15:55:06 IST
 | SMA 5 | 2092.10 | SMA 10 | 2092.81 | SMA 20 | 2094.19 |
 | SMA 50 | 2098.35 | SMA 100 | 2108.36 | SMA 200 | 2115.83 |
 | EMA 5 | 2091.75 | EMA 10 | 2092.67 | EMA 20 | 2094.11 |
-| EMA 50 | 2098.81 | EMA 100 | 2105.36 | EMA 200 | 2112.27 |
+| EMA 50 | 2098.81 | EMA 100 | 2105.36 | EMA 200 | 2112.26 |
 | WMA 10 | 2092.32 | WMA 20 | 2093.30 | MACD | -2.0342 |
 | MACD Signal | -1.9873 | MACD Diff | -0.0470 | ADX | 49.66 |
 | ADX+ | 7.26 | ADX- | 31.20 | Aroon Up | 0.00 |
@@ -312,9 +312,9 @@ Last updated: 2026-06-26 15:55:06 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 433017 | CMF | -0.2131 | Acc/Dist | 735615 |
+| OBV | 420701 | CMF | -0.2131 | Acc/Dist | 726196 |
 | MFI | 23.13 | Force Index | -32312 | EOM | -2597.330638 |
-| VPT | 797 | NVI | 960.94 | VWAP | 2092.91 |
+| VPT | 795 | NVI | 961.26 | VWAP | 2092.91 |
 
 ### 🕯️ Price Action
 
@@ -768,9 +768,9 @@ Last updated: 2026-06-26 15:55:06 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 4211721 | CMF | 0.1482 | Acc/Dist | 487531 |
+| OBV | 4211721 | CMF | 0.1482 | Acc/Dist | 456260 |
 | MFI | 67.48 | Force Index | 9305 | EOM | 200.136410 |
-| VPT | 2451 | NVI | 996.99 | VWAP | 980.52 |
+| VPT | 2460 | NVI | 996.99 | VWAP | 980.52 |
 
 ### 🕯️ Price Action
 
