@@ -1,6 +1,6 @@
 # 📊 Large Cap Technical Indicators
 
-Last updated: 2026-07-23 16:20:26 IST
+Last updated: 2026-07-23 17:46:36 IST
 
 ## 📊 MARKET INDEXES
 
