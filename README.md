@@ -1,6 +1,6 @@
 # 📊 Large Cap Technical Indicators
 
-Last updated: 2026-07-30 16:01:37 IST
+Last updated: 2026-07-30 17:43:56 IST
 
 ## 📊 MARKET INDEXES
 
@@ -882,7 +882,7 @@ Last updated: 2026-07-30 16:01:37 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 330049 | CMF | 0.1762 | Acc/Dist | 72347 |
+| OBV | 330049 | CMF | 0.1762 | Acc/Dist | 71961 |
 | MFI | 48.09 | Force Index | -8120 | EOM | -24626865.671642 |
 | VPT | 197 | NVI | 1006.62 | VWAP | 14191.46 |
 
