@@ -1,6 +1,6 @@
 # 📊 Large Cap Technical Indicators
 
-Last updated: 2026-08-05 16:16:08 IST
+Last updated: 2026-08-05 17:57:58 IST
 
 ## 📊 MARKET INDEXES
 
@@ -1021,7 +1021,7 @@ Last updated: 2026-08-05 16:16:08 IST
 | EMA 5 | 281.92 | EMA 10 | 281.86 | EMA 20 | 281.81 |
 | EMA 50 | 281.79 | EMA 100 | 281.84 | EMA 200 | 282.01 |
 | WMA 10 | 281.88 | WMA 20 | 281.82 | MACD | 0.0511 |
-| MACD Signal | 0.0236 | MACD Diff | 0.0276 | ADX | 16.72 |
+| MACD Signal | 0.0236 | MACD Diff | 0.0276 | ADX | 16.71 |
 | ADX+ | 19.45 | ADX- | 16.87 | Aroon Up | 92.00 |
 | Aroon Down | 64.00 | Aroon Ind | 28.00 | CCI | 176.62 |
 | DPO | -0.03 | Mass Index | 26.79 | Ichimoku A | 281.75 |
@@ -1053,7 +1053,7 @@ Last updated: 2026-08-05 16:16:08 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 5488655 | CMF | 0.2128 | Acc/Dist | -651967 |
+| OBV | 5488655 | CMF | 0.2128 | Acc/Dist | -655760 |
 | MFI | 62.96 | Force Index | 2455 | EOM | 4.179121 |
 | VPT | 4256 | NVI | 1022.25 | VWAP | 281.78 |
 
