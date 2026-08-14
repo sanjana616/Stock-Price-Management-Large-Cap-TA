@@ -1,16 +1,16 @@
 # 📊 Large Cap Technical Indicators
 
-Last updated: 2026-08-14 16:22:05 IST
+Last updated: 2026-08-14 17:07:23 IST
 
 ## 📊 MARKET INDEXES
 
 | Symbol | Datetime | Close | Volume | RSI | EMA20 | MACD | VWAP | Signal |
 |--------|----------|------:|-------:|----:|------:|-----:|-----:|:------:|
-| Nifty 50 | 2026-08-14 15:28:00 | 24366.00 | 0 | 58.47 | 24360.13 | -3.7094 | — | 🟢 BUY |
+| Nifty 50 | 2026-08-14 15:28:00 | 24366.00 | 0 | 58.52 | 24360.12 | -3.7075 | — | 🟢 BUY |
 | BankNifty | 2026-08-14 15:28:00 | 57491.10 | 0 | 56.36 | 57474.48 | -11.5032 | — | 🟢 BUY |
 | Sensex | 2026-08-14 15:28:00 | 78028.52 | 0 | 56.86 | 78003.27 | 22.3339 | — | 🟢 BUY |
 | MidcapNifty | 2026-08-14 15:28:00 | 18260.65 | 0 | 20.68 | 18267.86 | -6.6335 | — | 🟡 HOLD |
-| FinNifty | 2026-08-14 15:28:00 | 26213.65 | 0 | 53.03 | 26208.60 | -6.1678 | — | 🟢 BUY |
+| FinNifty | 2026-08-14 15:28:00 | 26213.65 | 0 | 53.03 | 26208.60 | -6.1685 | — | 🟢 BUY |
 
 ## 📈 STOCKS
 
@@ -426,7 +426,7 @@ Last updated: 2026-08-14 16:22:05 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 474860 | CMF | -0.3445 | Acc/Dist | 64246 |
+| OBV | 474860 | CMF | -0.3445 | Acc/Dist | 63889 |
 | MFI | 62.89 | Force Index | -51132 | EOM | -62730.287193 |
 | VPT | 208 | NVI | 1002.59 | VWAP | 2079.13 |
 
@@ -483,7 +483,7 @@ Last updated: 2026-08-14 16:22:05 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 1788026 | CMF | -0.0514 | Acc/Dist | 78974 |
+| OBV | 1788026 | CMF | -0.0514 | Acc/Dist | 96199 |
 | MFI | 44.34 | Force Index | -29 | EOM | -324.179380 |
 | VPT | -2220 | NVI | 997.91 | VWAP | 1066.10 |
 
@@ -540,7 +540,7 @@ Last updated: 2026-08-14 16:22:05 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | -1202684 | CMF | -0.0912 | Acc/Dist | -3510275 |
+| OBV | -1202684 | CMF | -0.0912 | Acc/Dist | -3511684 |
 | MFI | 51.91 | Force Index | -2023 | EOM | 1503.655220 |
 | VPT | -3806 | NVI | 1005.30 | VWAP | 1992.04 |
 
@@ -939,7 +939,7 @@ Last updated: 2026-08-14 16:22:05 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 723390 | CMF | -0.0993 | Acc/Dist | 687375 |
+| OBV | 723390 | CMF | -0.0993 | Acc/Dist | 687923 |
 | MFI | 21.64 | Force Index | -13450 | EOM | -69283.349605 |
 | VPT | 221 | NVI | 968.56 | VWAP | 1919.43 |
 
@@ -996,7 +996,7 @@ Last updated: 2026-08-14 16:22:05 IST
 
 | Indicator | Value | Indicator | Value | Indicator | Value |
 |-----------|------:|-----------|------:|-----------|------:|
-| OBV | 1230629 | CMF | -0.3690 | Acc/Dist | 643260 |
+| OBV | 1230629 | CMF | -0.3690 | Acc/Dist | 652379 |
 | MFI | 30.73 | Force Index | -1744 | EOM | 0.391417 |
 | VPT | 3854 | NVI | 987.68 | VWAP | 184.11 |
 
